@@ -12,6 +12,7 @@ logs:
 clean:
 	docker container stop nginx mariadb wordpress
 	docker network rm inception
+	docker compose -f ./srcs/docker-compose.yml down
 
 fclean: clean
 	@sudo rm -rf /home/jubaldo/data/mariadb/*

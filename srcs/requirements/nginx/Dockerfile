@@ -14,4 +14,8 @@ COPY ./conf/nginx.conf /etc/nginx/nginx.conf
 
 RUN chmod 755 /var/www/html
 RUN chown -R www-data:www-data /var/www/html
+
+# Starts the Nginx server with the "-g 'daemon off;'" option.
+# The "daemon off;" ensures that Nginx runs in the foreground, which is necessary
+# for the container to remain active since Docker containers stop when their main process exits.
 CMD [ "nginx", "-g", "daemon off;" ]
