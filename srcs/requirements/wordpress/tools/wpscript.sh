@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Attendre que MariaDB soit prêt
+# waiting for mariadb to be ready
 sleep 10
 
 if [ ! -e /var/www/wordpress/wp-config.php ]; then
