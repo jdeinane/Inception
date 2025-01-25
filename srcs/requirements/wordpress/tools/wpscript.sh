@@ -30,6 +30,10 @@ wp plugin install contact-form-7 --activate
 
 wp language core install en_US --activate
 
+THEME="twentytwentyfive"
+wp theme install $THEME --allow-root
+wp theme activate $THEME --allow-root
+
 wp theme delete twentynineteen twentytwenty
 wp plugin delete hello
 
